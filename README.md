@@ -1,6 +1,6 @@
 # GENAI PoC
 
-1. Provision demo environment "RHOAI on OCP on AWX with NVIDIA GPUs"
+1. Provision demo environment "RHOAI on OCP on AWX with NVIDIA GPUs" provision time around 90mins
 https://catalog.demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.ocp4-demo-rhods-nvidia-gpu-aws.prod&utm_source=webapp&utm_medium=share-link
 
 2. Deploy minio as object buckets.
