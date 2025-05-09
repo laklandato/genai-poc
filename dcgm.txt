@@ -1,18 +1,18 @@
 DCGM
 
 Configuring the NVIDIA DCGM Exporter Dashboard
+
 Download the latest NVIDIA DCGM Exporter Dashboard from the DCGM Exporter repository on GitHub:
-
 curl -LfO https://github.com/NVIDIA/dcgm-exporter/raw/main/grafana/dcgm-exporter-dashboard.json
+
 Create a config map from the downloaded file in the openshift-config-managed namespace:
-
 oc create configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed --from-file=dcgm-exporter-dashboard.json
+
 Label the config map to expose the dashboard in the Administrator perspective of the web console:
-
 oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/dashboard=true"
+
 Optional: Label the config map to expose the dashboard in the Developer perspecitive of the web console:
-
 oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/odc-dashboard=true"
-View the created resource and verify the labels:
 
+View the created resource and verify the labels:
 oc -n openshift-config-managed get cm nvidia-dcgm-exporter-dashboard --show-labels
