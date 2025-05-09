@@ -1,0 +1,12 @@
+#API curl test via cli
+
+#curl sample
+
+curl -X POST "https://<<api>>/v1/chat/completions" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "<<model name>>",
+    "messages": [
+      {"role": "user", "content": "how are you"}
+    ]
+  }'
