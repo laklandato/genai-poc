@@ -1,0 +1,17 @@
+apiVersion: ols.openshift.io/v1alpha1
+kind: OLSConfig
+metadata:
+  name: cluster
+spec:
+  llm:
+    providers:
+    - credentialsSecretRef:
+        name: <rhoai_api_keys> 
+      models:
+      - name: <model_name>
+      name: red_hat_openshift_ai
+      type: rhoai_vllm
+      url: <url> 
+  ols:
+    defaultProvider: red_hat_openshift_ai
+    defaultModel: <model_name>
