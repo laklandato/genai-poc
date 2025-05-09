@@ -1,1 +1,3 @@
-# openwebui
+# GENAI PoC
+
+OLS = OpenShift Lightspeed.
